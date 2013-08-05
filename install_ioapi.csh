@@ -4,8 +4,9 @@
 #> Scott Boone 6/10/2013 - initial script
 #> Scott Boone 7/11/2013 - modified for Stampede with intel compilers
 
-#> Create directories
-setenv BASE $cwd
+#> Set directories & system
+ setenv BASE $cwd
+ setenv BIN Linux2_x86_64ifort
 
 #> Grab installation files
  wget http://www.baronams.com/products/ioapi/ioapi-3.1.tar.gz
@@ -39,7 +40,6 @@ sed -i 's/\# PVMINCL  = \/dev\/null          \#  for /  PVMINCL  = \/dev\/null  
  sed -i 's/OMPLIBS  = -openmp/#OMPLIBS  = -openmp/' Makeinclude.Linux2_x86_64ifort
 
 #> Install library
- setenv BIN Linux2_x86_64ifort
  make all
 
 cd $BASE
