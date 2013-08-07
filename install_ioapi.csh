@@ -37,7 +37,7 @@ sed -i 's/\# PVMINCL  = \/dev\/null          \#  for /  PVMINCL  = \/dev\/null  
 #> Correct Makeinclude
  sed -i 's#MFLAGS    = -mtune core2 -traceback#MFLAGS    = -mtune=core2 -traceback#' Makeinclude.Linux2_x86_64ifort
  sed -i 's/OMPFLAGS  = -openmp/#OMPFLAGS  = -openmp/' Makeinclude.Linux2_x86_64ifort
- sed -i 's/OMPLIBS  = -openmp/#OMPLIBS  = -openmp/' Makeinclude.Linux2_x86_64ifort
+ sed -i 's/OMPLIBS   = -openmp/#OMPLIBS   = -openmp/' Makeinclude.Linux2_x86_64ifort
 
 #> Install library
  make all
